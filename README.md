@@ -1,7 +1,7 @@
 # Fair Trade USA · Producer Exchange Agent (hackathon MVP)
 
 **Live demo:** https://ftusa-producer-exchange.vercel.app · reviewer view: https://ftusa-producer-exchange.vercel.app/review
-*(Vercel demo: records and sessions are kept in temporary per-instance storage and may reset. Use a local run for the full reviewer walkthrough.)*
+*(Password-protected: the browser asks for a login; any username works, password from the team. Runs on Amazon Bedrock. Records and sessions are kept in temporary per-instance storage and may reset. Use a local run for the full reviewer walkthrough.)*
 
 A multilingual conversational agent: a producer describes a challenge, confirms the agent's playback, and gets back (a) what the data shows for their crop and region and (b) what comparable producers funded, with every claim cited and tied to a certification standard clause. With consent, the conversation is written back as a tagged record (`source = "agent conversation"`, `review_status = pending`) that can be joined to the producer's Premium, survey and certification data.
 
