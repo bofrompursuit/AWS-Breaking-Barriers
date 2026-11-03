@@ -1,0 +1,98 @@
+[
+  {
+    "producer_id": "P-CO-001",
+    "org_name": "Finca Alto Mirador",
+    "country": "Colombia",
+    "region": "Cauca",
+    "region_id": "CO-CAU",
+    "crop": "coffee",
+    "entity_type": "individual farm",
+    "members": 1,
+    "language": "es",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-PE-002",
+    "org_name": "Cooperativa Río Ene",
+    "country": "Peru",
+    "region": "Junín (Satipo)",
+    "region_id": "PE-JUN",
+    "crop": "coffee",
+    "entity_type": "cooperative",
+    "members": 410,
+    "language": "es",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-HN-003",
+    "org_name": "Cooperativa Cumbre Azul",
+    "country": "Honduras",
+    "region": "Copán",
+    "region_id": "HN-COP",
+    "crop": "coffee",
+    "entity_type": "cooperative",
+    "members": 260,
+    "language": "es",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-MX-004",
+    "org_name": "Unión Sierra Madre",
+    "country": "Mexico",
+    "region": "Chiapas",
+    "region_id": "MX-CHI",
+    "crop": "coffee",
+    "entity_type": "cooperative",
+    "members": 980,
+    "language": "es",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-CI-005",
+    "org_name": "Coopérative Espoir de Soubré",
+    "country": "Côte d'Ivoire",
+    "region": "Nawa (Soubré)",
+    "region_id": "CI-NAW",
+    "crop": "cocoa",
+    "entity_type": "cooperative",
+    "members": 1150,
+    "language": "fr",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-CI-006",
+    "org_name": "Coopérative Lumière de Gagnoa",
+    "country": "Côte d'Ivoire",
+    "region": "Gôh (Gagnoa)",
+    "region_id": "CI-GOH",
+    "crop": "cocoa",
+    "entity_type": "cooperative",
+    "members": 720,
+    "language": "fr",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-CO-007",
+    "org_name": "Plantación La Esperanza",
+    "country": "Colombia",
+    "region": "Magdalena",
+    "region_id": "CO-MAG",
+    "crop": "banana",
+    "entity_type": "hired-labor farm",
+    "members": 140,
+    "language": "es",
+    "synthetic": true
+  },
+  {
+    "producer_id": "P-PE-008",
+    "org_name": "Asociación Valle del Chira",
+    "country": "Peru",
+    "region": "Piura",
+    "region_id": "PE-PIU",
+    "crop": "banana",
+    "entity_type": "small producer association",
+    "members": 330,
+    "language": "es",
+    "synthetic": true
+  }
+]

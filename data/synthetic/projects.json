@@ -1,0 +1,338 @@
+[
+  {
+    "project_id": "PRJ-CO-001-1",
+    "producer_id": "P-CO-001",
+    "year": 2022,
+    "title": "Rainwater catchment tanks",
+    "description": "Installed household and nursery rainwater catchment tanks to bridge dry-season gaps.",
+    "tags": [
+      "water"
+    ],
+    "amount_usd": 5000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CO-001-2",
+    "producer_id": "P-CO-001",
+    "year": 2023,
+    "title": "Shade-tree planting",
+    "description": "Planted native shade trees across member plots to lower canopy temperature and soil moisture loss.",
+    "tags": [
+      "climate and weather"
+    ],
+    "amount_usd": 11000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CO-001-3",
+    "producer_id": "P-CO-001",
+    "year": 2024,
+    "title": "Community center",
+    "description": "Built a meeting space used for assemblies, training, and women’s committee activities.",
+    "tags": [
+      "social and community"
+    ],
+    "amount_usd": 57000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-002-1",
+    "producer_id": "P-PE-002",
+    "year": 2022,
+    "title": "Community compost plant",
+    "description": "Built a compost facility turning pulp and husk residues into organic fertilizer for members.",
+    "tags": [
+      "soil and land"
+    ],
+    "amount_usd": 10000,
+    "status": "completed",
+    "outcome_note": "Adopted by roughly two-thirds of members.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-002-2",
+    "producer_id": "P-PE-002",
+    "year": 2023,
+    "title": "Scholarship program",
+    "description": "Funded secondary-school scholarships for members' children.",
+    "tags": [
+      "education"
+    ],
+    "amount_usd": 47000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-002-3",
+    "producer_id": "P-PE-002",
+    "year": 2024,
+    "title": "Community center",
+    "description": "Built a meeting space used for assemblies, training, and women’s committee activities.",
+    "tags": [
+      "social and community"
+    ],
+    "amount_usd": 17000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-HN-003-1",
+    "producer_id": "P-HN-003",
+    "year": 2022,
+    "title": "Rainwater catchment tanks",
+    "description": "Installed household and nursery rainwater catchment tanks to bridge dry-season gaps.",
+    "tags": [
+      "water"
+    ],
+    "amount_usd": 43000,
+    "status": "completed",
+    "outcome_note": "Adopted by roughly two-thirds of members.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-HN-003-2",
+    "producer_id": "P-HN-003",
+    "year": 2023,
+    "title": "Shade-tree planting",
+    "description": "Planted native shade trees across member plots to lower canopy temperature and soil moisture loss.",
+    "tags": [
+      "climate and weather"
+    ],
+    "amount_usd": 53000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-HN-003-3",
+    "producer_id": "P-HN-003",
+    "year": 2024,
+    "title": "Harvest worker housing upgrade",
+    "description": "Upgraded seasonal worker housing with sanitation and safe water.",
+    "tags": [
+      "labor and migration"
+    ],
+    "amount_usd": 13000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-MX-004-1",
+    "producer_id": "P-MX-004",
+    "year": 2022,
+    "title": "Community compost plant",
+    "description": "Built a compost facility turning pulp and husk residues into organic fertilizer for members.",
+    "tags": [
+      "soil and land"
+    ],
+    "amount_usd": 47000,
+    "status": "completed",
+    "outcome_note": "Adopted by roughly two-thirds of members.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-MX-004-2",
+    "producer_id": "P-MX-004",
+    "year": 2023,
+    "title": "Scholarship program",
+    "description": "Funded secondary-school scholarships for members' children.",
+    "tags": [
+      "education"
+    ],
+    "amount_usd": 44000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-MX-004-3",
+    "producer_id": "P-MX-004",
+    "year": 2024,
+    "title": "Scholarship program",
+    "description": "Funded secondary-school scholarships for members' children.",
+    "tags": [
+      "education"
+    ],
+    "amount_usd": 6000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-005-1",
+    "producer_id": "P-CI-005",
+    "year": 2022,
+    "title": "Quality lab and cupping room",
+    "description": "Equipped a quality lab so the organization can grade lots and negotiate on quality premiums.",
+    "tags": [
+      "market and price"
+    ],
+    "amount_usd": 58000,
+    "status": "completed",
+    "outcome_note": "Adopted by roughly two-thirds of members.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-005-2",
+    "producer_id": "P-CI-005",
+    "year": 2023,
+    "title": "Community compost plant",
+    "description": "Built a compost facility turning pulp and husk residues into organic fertilizer for members.",
+    "tags": [
+      "soil and land"
+    ],
+    "amount_usd": 10000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-005-3",
+    "producer_id": "P-CI-005",
+    "year": 2024,
+    "title": "Riparian buffer reforestation",
+    "description": "Reforested stream buffers to protect water sources and wildlife corridors.",
+    "tags": [
+      "biodiversity and conservation"
+    ],
+    "amount_usd": 39000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-006-1",
+    "producer_id": "P-CI-006",
+    "year": 2022,
+    "title": "Shade-tree planting",
+    "description": "Planted native shade trees across member plots to lower canopy temperature and soil moisture loss.",
+    "tags": [
+      "climate and weather"
+    ],
+    "amount_usd": 33000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-006-2",
+    "producer_id": "P-CI-006",
+    "year": 2023,
+    "title": "Community compost plant",
+    "description": "Built a compost facility turning pulp and husk residues into organic fertilizer for members.",
+    "tags": [
+      "soil and land"
+    ],
+    "amount_usd": 57000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CI-006-3",
+    "producer_id": "P-CI-006",
+    "year": 2024,
+    "title": "Revolving credit fund",
+    "description": "Seeded a member revolving loan fund for inputs and emergencies at below-market rates.",
+    "tags": [
+      "financial and access to capital"
+    ],
+    "amount_usd": 9000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CO-007-1",
+    "producer_id": "P-CO-007",
+    "year": 2022,
+    "title": "Rainwater catchment tanks",
+    "description": "Installed household and nursery rainwater catchment tanks to bridge dry-season gaps.",
+    "tags": [
+      "water"
+    ],
+    "amount_usd": 31000,
+    "status": "completed",
+    "outcome_note": "Members report fewer lost harvest days.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CO-007-2",
+    "producer_id": "P-CO-007",
+    "year": 2023,
+    "title": "Shade-tree planting",
+    "description": "Planted native shade trees across member plots to lower canopy temperature and soil moisture loss.",
+    "tags": [
+      "climate and weather"
+    ],
+    "amount_usd": 23000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-CO-007-3",
+    "producer_id": "P-CO-007",
+    "year": 2024,
+    "title": "Scholarship program",
+    "description": "Funded secondary-school scholarships for members' children.",
+    "tags": [
+      "education"
+    ],
+    "amount_usd": 9000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-008-1",
+    "producer_id": "P-PE-008",
+    "year": 2022,
+    "title": "Shade-tree planting",
+    "description": "Planted native shade trees across member plots to lower canopy temperature and soil moisture loss.",
+    "tags": [
+      "climate and weather"
+    ],
+    "amount_usd": 55000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-008-2",
+    "producer_id": "P-PE-008",
+    "year": 2023,
+    "title": "Community compost plant",
+    "description": "Built a compost facility turning pulp and husk residues into organic fertilizer for members.",
+    "tags": [
+      "soil and land"
+    ],
+    "amount_usd": 35000,
+    "status": "completed",
+    "outcome_note": "Maintenance costs higher than planned.",
+    "synthetic": true
+  },
+  {
+    "project_id": "PRJ-PE-008-3",
+    "producer_id": "P-PE-008",
+    "year": 2024,
+    "title": "Revolving credit fund",
+    "description": "Seeded a member revolving loan fund for inputs and emergencies at below-market rates.",
+    "tags": [
+      "financial and access to capital"
+    ],
+    "amount_usd": 43000,
+    "status": "in progress",
+    "outcome_note": "Ongoing.",
+    "synthetic": true
+  }
+]

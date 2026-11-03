@@ -1,0 +1,13 @@
+clause_id,standard,section,text,tags
+APS-DEMO-1.1,APS (ILLUSTRATIVE PLACEHOLDER),Community Development Fund,"Placeholder: The organization plans Community Development Fund (Premium) use through a participatory needs assessment and documents the decision in an assembly.",financial and access to capital|social and community
+APS-DEMO-1.2,APS (ILLUSTRATIVE PLACEHOLDER),Community Development Fund,"Placeholder: Premium-funded projects are tracked against their stated objectives and outcomes are reported back to members.",social and community|infrastructure|education|health
+APS-DEMO-2.1,APS (ILLUSTRATIVE PLACEHOLDER),Water,"Placeholder: Producers identify water sources and risks to water availability and implement measures to use water efficiently.",water|climate and weather
+APS-DEMO-2.2,APS (ILLUSTRATIVE PLACEHOLDER),Water,"Placeholder: Riparian zones and water sources are protected from contamination and erosion.",water|biodiversity and conservation
+APS-DEMO-3.1,APS (ILLUSTRATIVE PLACEHOLDER),Soil,"Placeholder: Producers apply practices that maintain or improve soil fertility and reduce erosion, such as cover crops, organic matter and terracing.",soil and land
+APS-DEMO-4.1,APS (ILLUSTRATIVE PLACEHOLDER),Climate resilience,"Placeholder: The organization assesses climate-related risks to production and plans adaptation measures such as shade, diversified planting or resilient varieties.",climate and weather|water|soil and land
+APS-DEMO-5.1,APS (ILLUSTRATIVE PLACEHOLDER),Biodiversity,"Placeholder: No deforestation of natural forest; producers maintain or restore native vegetation and buffer zones.",biodiversity and conservation|soil and land
+APS-DEMO-6.1,APS (ILLUSTRATIVE PLACEHOLDER),Labor,"Placeholder: Workers, including seasonal and migrant workers, have access to safe housing, water and sanitation where housing is provided.",labor and migration|health
+APS-DEMO-6.2,APS (ILLUSTRATIVE PLACEHOLDER),Labor,"Placeholder: Wages meet at least the legal minimum and progress toward a living wage is monitored.",labor and migration|market and price
+APS-DEMO-7.1,APS (ILLUSTRATIVE PLACEHOLDER),Market access,"Placeholder: The organization keeps records that support traceability and quality, enabling access to markets and quality premiums.",market and price|infrastructure
+APS-DEMO-7.2,APS (ILLUSTRATIVE PLACEHOLDER),Financial management,"Placeholder: The organization manages funds transparently and may establish reserves or credit schemes approved by members.",financial and access to capital|market and price
+FPS-DEMO-1.1,FPS (ILLUSTRATIVE PLACEHOLDER),Resource management,"Placeholder: Fishers participate in measures to keep target stocks and their ecosystems healthy.",biodiversity and conservation|climate and weather

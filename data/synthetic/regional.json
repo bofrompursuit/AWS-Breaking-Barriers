@@ -1,0 +1,379 @@
+[
+  {
+    "source_id": "RF-CO-CAU-CHIRPS",
+    "region_id": "CO-CAU",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-22%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-CO-CAU-AQUEDUCT",
+    "region_id": "CO-CAU",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "medium-high → high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-CO-CAU-SOILGRIDS",
+    "region_id": "CO-CAU",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "38 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CO-CAU-JRCTMF",
+    "region_id": "CO-CAU",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "1.1%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-PE-JUN-CHIRPS",
+    "region_id": "PE-JUN",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-9%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-PE-JUN-AQUEDUCT",
+    "region_id": "PE-JUN",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "low-medium → medium-high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-PE-JUN-SOILGRIDS",
+    "region_id": "PE-JUN",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "44 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-PE-JUN-JRCTMF",
+    "region_id": "PE-JUN",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "2.4%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-HN-COP-CHIRPS",
+    "region_id": "HN-COP",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-17%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-HN-COP-AQUEDUCT",
+    "region_id": "HN-COP",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "medium-high → high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-HN-COP-SOILGRIDS",
+    "region_id": "HN-COP",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "31 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-HN-COP-JRCTMF",
+    "region_id": "HN-COP",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "1.6%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-MX-CHI-CHIRPS",
+    "region_id": "MX-CHI",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-12%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-MX-CHI-AQUEDUCT",
+    "region_id": "MX-CHI",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "medium-high → high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-MX-CHI-SOILGRIDS",
+    "region_id": "MX-CHI",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "35 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-MX-CHI-JRCTMF",
+    "region_id": "MX-CHI",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "1.9%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CI-NAW-CHIRPS",
+    "region_id": "CI-NAW",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-14%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-CI-NAW-AQUEDUCT",
+    "region_id": "CI-NAW",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "low-medium → medium-high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-CI-NAW-SOILGRIDS",
+    "region_id": "CI-NAW",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "18 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CI-NAW-JRCTMF",
+    "region_id": "CI-NAW",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "3.8%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CI-GOH-CHIRPS",
+    "region_id": "CI-GOH",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-19%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-CI-GOH-AQUEDUCT",
+    "region_id": "CI-GOH",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "medium-high → high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-CI-GOH-SOILGRIDS",
+    "region_id": "CI-GOH",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "16 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CI-GOH-JRCTMF",
+    "region_id": "CI-GOH",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "3.1%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CO-MAG-CHIRPS",
+    "region_id": "CO-MAG",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-26%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-CO-MAG-AQUEDUCT",
+    "region_id": "CO-MAG",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "high → extremely high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-CO-MAG-SOILGRIDS",
+    "region_id": "CO-MAG",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "12 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-CO-MAG-JRCTMF",
+    "region_id": "CO-MAG",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "0.6%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-PE-PIU-CHIRPS",
+    "region_id": "PE-PIU",
+    "dataset": "CHIRPS v2.0 rainfall (SYNTHETIC STAND-IN)",
+    "metric": "rainfall vs 10-year average, last two seasons",
+    "value": "-31%",
+    "tags": [
+      "climate and weather",
+      "water"
+    ]
+  },
+  {
+    "source_id": "RF-PE-PIU-AQUEDUCT",
+    "region_id": "PE-PIU",
+    "dataset": "WRI Aqueduct 4.0 (SYNTHETIC STAND-IN)",
+    "metric": "baseline water stress → 2030 business-as-usual projection",
+    "value": "extremely high → extremely high",
+    "tags": [
+      "water",
+      "climate and weather"
+    ]
+  },
+  {
+    "source_id": "RF-PE-PIU-SOILGRIDS",
+    "region_id": "PE-PIU",
+    "dataset": "ISRIC SoilGrids 2.0 (SYNTHETIC STAND-IN)",
+    "metric": "topsoil organic carbon (0–30 cm)",
+    "value": "9 g/kg",
+    "tags": [
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-PE-PIU-JRCTMF",
+    "region_id": "PE-PIU",
+    "dataset": "JRC Tropical Moist Forest (SYNTHETIC STAND-IN)",
+    "metric": "forest cover lost 2015–2024",
+    "value": "0.3%",
+    "tags": [
+      "biodiversity and conservation",
+      "soil and land"
+    ]
+  },
+  {
+    "source_id": "RF-WB-COFFEE",
+    "region_id": "*",
+    "crop": "coffee",
+    "dataset": "World Bank Pink Sheet (SYNTHETIC STAND-IN)",
+    "metric": "coffee benchmark price, 12-month change (arabica)",
+    "value": "-14%",
+    "tags": [
+      "market and price"
+    ]
+  },
+  {
+    "source_id": "RF-WB-COCOA",
+    "region_id": "*",
+    "crop": "cocoa",
+    "dataset": "World Bank Pink Sheet (SYNTHETIC STAND-IN)",
+    "metric": "cocoa benchmark price, 12-month change (after the 2024 peak)",
+    "value": "-21%",
+    "tags": [
+      "market and price"
+    ]
+  },
+  {
+    "source_id": "RF-WB-BANANA",
+    "region_id": "*",
+    "crop": "banana",
+    "dataset": "World Bank Pink Sheet (SYNTHETIC STAND-IN)",
+    "metric": "banana benchmark price, 12-month change (flat in real terms)",
+    "value": "3%",
+    "tags": [
+      "market and price"
+    ]
+  }
+]

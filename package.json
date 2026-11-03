@@ -1,0 +1,19 @@
+{
+  "name": "ftusa-producer-exchange",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fair Trade USA Producer Exchange Agent — hackathon MVP slice (synthetic data only)",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env lib/server.js",
+    "seed": "node lib/generate.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dependencies": {
+    "@anthropic-ai/bedrock-sdk": "^1.1.1",
+    "@anthropic-ai/sdk": "^1.4.0"
+  }
+}

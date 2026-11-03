@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exchange Review</title>
+<style>
+:root{--bg:#f6f4ee;--card:#fff;--ink:#1f2a24;--mute:#66706a;--line:#e3dfd3;--acc:#1f6f4a;--acc2:#e8f2ec;--warn:#9a5b00;--warnbg:#fff4e0}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--card)}header h1{font-size:16px;margin:0 auto 0 0}a{color:var(--acc)}
+main{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;max-width:1300px;margin:16px auto;padding:0 16px}@media(max-width:860px){main{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
+.row{padding:8px;border-radius:8px;cursor:pointer;border:1px solid transparent}.row:hover,.row.on{background:var(--acc2);border-color:var(--line)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;background:#ece9df;font-size:12px;margin:1px}.pending{background:var(--warnbg);color:var(--warn)}.reviewed{background:var(--acc2);color:var(--acc)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);margin:18px 0 6px}h2:first-child{margin-top:0}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:3px 12px}.kv b{color:var(--mute);font-weight:500}
+textarea,input{font:inherit;width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 8px}button{font:inherit;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;margin-top:8px}
+pre{background:#f1efe8;padding:10px;border-radius:8px;overflow:auto;font-size:12px;max-height:340px}
+.g{border-left:3px solid var(--acc);padding:4px 10px;margin:6px 0}.c{font-size:12px;color:var(--mute)}
+</style></head><body>
+<header><h1>Impact, Research &amp; Learning · Exchange record review</h1><a href="/">← Producer chat</a></header>
+<main><section class="panel"><h2>Records</h2><div id="list">Loading…</div></section><section class="panel" id="detail">Select a record.</section></main>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function load(sel){const {records}=await fetch('/api/records').then(r=>r.json());
+ $('#list').innerHTML=records.map(r=>`<div class="row" data-id="${r.record_id}"><b>${r.producer_id}</b> · ${r.outcome}<br><span class="pill ${r.review_status}">${r.review_status}</span>${r.pii_flag?.raised?'<span class="pill pending">PII flag</span>':''}<span class="c"> ${new Date(r.created_at).toLocaleString()}</span></div>`).join('')||'No records yet.';
+ document.querySelectorAll('.row').forEach(el=>el.onclick=()=>show(el.dataset.id));if(sel)show(sel)}
+async function show(id){document.querySelectorAll('.row').forEach(el=>el.classList.toggle('on',el.dataset.id===id));
+ const j=await fetch(`/api/records/${id}/joined`).then(r=>r.json());const r=j.record;
+ const kv=[['Producer ID',r.producer_id],['Entity type',r.entity_type+(r.entity_type_registered&&r.entity_type_registered!==r.entity_type?` (record said: ${r.entity_type_registered})`:'')],['Location',r.location],['Crop',r.crop],['Language',r.language],['Source',r.source],['Outcome',r.outcome+(r.decline_stage?` · ${r.decline_stage}`:'')],['Review status',r.review_status],['PII flag',r.pii_flag?.raised?'RAISED: '+r.pii_flag.reasons.map(p=>p.kind).join(', '):'none'],['Feedback',r.feedback?`${r.feedback.helpful}${r.feedback.comment?' · '+r.feedback.comment:''}`:'—'],['Timing / severity',[r.timing,r.severity].filter(Boolean).join(' · ')],['Already tried',r.already_tried],['Corrections',r.corrections]].filter(x=>x[1]);
+ $('#detail').innerHTML=`<h2>Record</h2><div class="kv">${kv.map(([k,v])=>`<b>${k}</b><span>${esc(v)}</span>`).join('')}</div>
+ ${r.outcome==='completed'?`<h2>Challenge summary (producer's words)</h2><textarea id="sum" rows="3">${esc(r.challenge_summary)}</textarea>${r.challenge_summary_en&&r.challenge_summary_en!==r.challenge_summary?`<div class="c">EN: ${esc(r.challenge_summary_en)}</div>`:''}
+ <h2>Challenge tags</h2><input id="tags" value="${esc((r.tags||[]).join('; '))}"><div class="c">Separate with semicolons.</div><button id="approve">${r.review_status==='reviewed'?'Save corrections':'Approve / mark reviewed'}</button>
+ <h2>Guidance given</h2>${r.guidance.insights.map(g=>`<div class="g">${esc(g.text)}<div class="c">Sources: ${g.citations.map(c=>esc(c.id+' — '+(c.dataset||c.title||c.kind))).join('; ')} · Clauses: ${g.clauses.map(c=>c.clause_id).join(', ')}</div></div>`).join('')}
+ ${r.guidance.examples.map(e=>`<div class="g">${esc(e.text)}<div class="c">Peer: ${esc(e.citation.id+' — '+e.citation.peer_organization+', '+e.citation.title)} · Clauses: ${e.clauses.map(c=>c.clause_id).join(', ')}</div></div>`).join('')}
+ <h2>Agent reasoning log</h2><pre>${esc(r.reasoning_log.map(l=>`${l.at}  ${l.tool}: ${l.reasoning}`).join('\n'))}</pre>`:'<p class="c">Declined: no conversation content was stored.</p>'}
+ <h2>Joined with producer data (metadata store query)</h2><pre>${esc(j.sql)}</pre>
+ <div class="kv"><b>Premium projects</b><span>${j.premium_projects.map(p=>esc(`${p.project_id} · ${p.year} · ${p.title} · $${p.amount_usd.toLocaleString()} · ${p.status}`)).join('<br>')}</span>
+ <b>Survey</b><span>${j.surveys.map(s=>esc(`${s.year}: ${s.respondents} respondents · top challenges: ${s.top_reported_challenges.join(', ')} · income ${s.avg_income_change_pct}%`)).join('<br>')}</span>
+ <b>Certification</b><span>${j.certifications.map(c=>esc(`${c.standard} v${c.standard_version} · ${c.status} · last audit ${c.last_audit}`)).join('<br>')}</span></div>`;
+ const b=$('#approve');if(b)b.onclick=async()=>{await fetch(`/api/records/${id}/review`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({challenge_summary:$('#sum').value,tags:$('#tags').value.split(';').map(s=>s.trim()).filter(Boolean)})});load(id)}}
+load();
+</script></body></html>

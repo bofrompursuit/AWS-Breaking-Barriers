@@ -1,0 +1,114 @@
+[
+  {
+    "survey_id": "SRV-CO-001",
+    "producer_id": "P-CO-001",
+    "year": 2025,
+    "respondents": 1,
+    "top_reported_challenges": [
+      "water",
+      "climate and weather",
+      "social and community"
+    ],
+    "avg_income_change_pct": -10,
+    "share_reporting_lower_yield_pct": 65,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-PE-002",
+    "producer_id": "P-PE-002",
+    "year": 2025,
+    "respondents": 123,
+    "top_reported_challenges": [
+      "market and price",
+      "soil and land",
+      "financial and access to capital"
+    ],
+    "avg_income_change_pct": 0,
+    "share_reporting_lower_yield_pct": 21,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-HN-003",
+    "producer_id": "P-HN-003",
+    "year": 2025,
+    "respondents": 78,
+    "top_reported_challenges": [
+      "water",
+      "climate and weather",
+      "climate and weather"
+    ],
+    "avg_income_change_pct": -10,
+    "share_reporting_lower_yield_pct": 46,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-MX-004",
+    "producer_id": "P-MX-004",
+    "year": 2025,
+    "respondents": 294,
+    "top_reported_challenges": [
+      "market and price",
+      "soil and land",
+      "climate and weather"
+    ],
+    "avg_income_change_pct": -5,
+    "share_reporting_lower_yield_pct": 32,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-CI-005",
+    "producer_id": "P-CI-005",
+    "year": 2025,
+    "respondents": 345,
+    "top_reported_challenges": [
+      "market and price",
+      "soil and land",
+      "water"
+    ],
+    "avg_income_change_pct": -15,
+    "share_reporting_lower_yield_pct": 28,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-CI-006",
+    "producer_id": "P-CI-006",
+    "year": 2025,
+    "respondents": 216,
+    "top_reported_challenges": [
+      "water",
+      "climate and weather",
+      "health"
+    ],
+    "avg_income_change_pct": -5,
+    "share_reporting_lower_yield_pct": 64,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-CO-007",
+    "producer_id": "P-CO-007",
+    "year": 2025,
+    "respondents": 42,
+    "top_reported_challenges": [
+      "water",
+      "climate and weather",
+      "soil and land"
+    ],
+    "avg_income_change_pct": -15,
+    "share_reporting_lower_yield_pct": 63,
+    "synthetic": true
+  },
+  {
+    "survey_id": "SRV-PE-008",
+    "producer_id": "P-PE-008",
+    "year": 2025,
+    "respondents": 99,
+    "top_reported_challenges": [
+      "water",
+      "climate and weather",
+      "financial and access to capital"
+    ],
+    "avg_income_change_pct": 4,
+    "share_reporting_lower_yield_pct": 54,
+    "synthetic": true
+  }
+]
