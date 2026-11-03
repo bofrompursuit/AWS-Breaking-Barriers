@@ -1,0 +1,4 @@
+{
+  "functions": { "api/index.js": { "includeFiles": "{public,data}/**", "maxDuration": 300 } },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+}

@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Exchange Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f4ee;--card:#fff;--ink:#1f2a24;--mute:#66706a;--line:#e3dfd3;--acc:#1f6f4a;--acc2:#e8f2ec;--warn:#9a5b00;--warnbg:#fff4e0}
-*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+:root{--bg:#F5F5F5;--card:#fff;--ink:#39373A;--mute:#737374;--line:#D1D1D3;--acc:#487410;--acc2:#EEF8E0;--brand:#93D73B;--indigo:#313D7F;--link:#0783A1;--warn:#A54623;--warnbg:#FEEBA5}
+*{box-sizing:border-box}body{margin:0;font:14px/1.55 Rubik,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
 header{display:flex;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--card)}header h1{font-size:16px;margin:0 auto 0 0}a{color:var(--acc)}
 main{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;max-width:1300px;margin:16px auto;padding:0 16px}@media(max-width:860px){main{grid-template-columns:1fr}}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
@@ -14,6 +15,7 @@ h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
 textarea,input{font:inherit;width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 8px}button{font:inherit;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;margin-top:8px}
 pre{background:#f1efe8;padding:10px;border-radius:8px;overflow:auto;font-size:12px;max-height:340px}
 .g{border-left:3px solid var(--acc);padding:4px 10px;margin:6px 0}.c{font-size:12px;color:var(--mute)}
+header{background:var(--indigo);color:#fff;border-bottom:4px solid var(--brand)}header h1{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:700}header h1 span{color:#D1D1D3!important}header a{color:#BFE58E!important}header label{color:#fff}h2{font-family:Rubik,system-ui,sans-serif}button:hover{background:#6B9D2B}a{color:var(--link)}
 </style></head><body>
 <header><h1>Impact, Research &amp; Learning · Exchange record review</h1><a href="/">← Producer chat</a></header>
 <main><section class="panel"><h2>Records</h2><div id="list">Loading…</div></section><section class="panel" id="detail">Select a record.</section></main>
