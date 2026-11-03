@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env lib/server.js",
     "seed": "node lib/generate.js",
-    "test": "node --test test/"
+    "test": "node --test \"test/**/*.test.js\""
   },
   "engines": {
     "node": "24.x"

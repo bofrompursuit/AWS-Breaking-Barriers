@@ -35,17 +35,19 @@ header{background:var(--indigo);color:#fff;border-bottom:4px solid var(--brand)}
 <p class="note" id="prov"></p>
 <script>
 const $=(s)=>document.querySelector(s);let sid=null,producers=[];
+// Escape anything that is not our own markup: tool reasoning is model-written and can echo producer input.
+const esc=(s)=>String(s??'').replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const add=(cls,text)=>{const d=document.createElement('div');d.className='msg '+cls;d.textContent=text;$('#log').append(d);$('#log').scrollTop=1e9;return d};
-fetch('/api/producers').then(r=>r.json()).then(d=>{producers=d.producers;$('#producer').innerHTML=producers.map(p=>`<option value="${p.producer_id}">${p.producer_id} · ${p.crop} · ${p.region}, ${p.country}</option>`).join('');$('#prov').textContent=`Model: ${d.provider} / ${d.model} · ${d.standards} standard clauses loaded`;showProfile()});
+fetch('/api/producers').then(r=>r.json()).then(d=>{producers=d.producers;$('#producer').innerHTML=producers.map(p=>`<option value="${esc(p.producer_id)}">${esc(p.producer_id)} · ${esc(p.crop)} · ${esc(p.region)}, ${esc(p.country)}</option>`).join('');$('#prov').textContent=`Model: ${d.provider} / ${d.model} · ${d.standards} standard clauses loaded`;showProfile()});
 $('#producer').onchange=()=>{const p=producers.find(x=>x.producer_id===$('#producer').value);$('#lang').value=p.language==='fr'?'fr':'es';showProfile()};
-function showProfile(){const p=producers.find(x=>x.producer_id===$('#producer').value);if(!p)return;$('#profile').innerHTML=[['ID',p.producer_id],['Org',p.org_name],['Location',`${p.region}, ${p.country}`],['Crop',p.crop],['Entity (on record)',p.entity_type],['Members',p.members]].map(([k,v])=>`<b>${k}</b><span>${v}</span>`).join('')}
+function showProfile(){const p=producers.find(x=>x.producer_id===$('#producer').value);if(!p)return;$('#profile').innerHTML=[['ID',p.producer_id],['Org',p.org_name],['Location',`${p.region}, ${p.country}`],['Crop',p.crop],['Entity (on record)',p.entity_type],['Members',p.members]].map(([k,v])=>`<b>${k}</b><span>${esc(v)}</span>`).join('')}
 $('#start').onclick=async()=>{const r=await fetch('/api/session',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({producerId:$('#producer').value,lang:$('#lang').value})}).then(r=>r.json());sid=r.sessionId;$('#log').innerHTML='';add('a',r.greeting);$('#t').disabled=$('#send').disabled=false;$('#t').focus();$('#tools').textContent='—';$('#flags').textContent='None'};
 $('#t').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#f').requestSubmit()}};
 $('#f').onsubmit=async e=>{e.preventDefault();const m=$('#t').value.trim();if(!m||!sid)return;$('#t').value='';add('u',m);$('#send').disabled=true;const w=add('sys','thinking…');
  try{const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sessionId:sid,message:m})}).then(r=>r.json());w.remove();if(r.error)throw new Error(r.error);add('a',r.reply);render(r.state)}catch(err){w.textContent='Error: '+err.message}
  $('#send').disabled=false};
 function render(s){const f=[...s.pii.map(p=>`PII flag for human review: ${p.kind} (${p.by})`),...s.outOfScope.map(o=>`Out-of-scope request logged: ${o.category}`)];if(s.closed)f.push(s.closed==='saved'?'Record saved (source = agent conversation, review pending)':'Declined outcome recorded (no content stored)');
- $('#flags').innerHTML=f.length?f.map(x=>`<div class="flag">${x}</div>`).join(''):'None';
- $('#tools').innerHTML=s.reasoningLog.map(l=>`<div class="tool"><b>${l.tool}</b><br>${l.reasoning||''}</div>`).join('')||'—';
+ $('#flags').innerHTML=f.length?f.map(x=>`<div class="flag">${esc(x)}</div>`).join(''):'None';
+ $('#tools').innerHTML=s.reasoningLog.map(l=>`<div class="tool"><b>${esc(l.tool)}</b><br>${esc(l.reasoning)}</div>`).join('')||'—';
  if(s.closed){$('#t').disabled=$('#send').disabled=true;add('sys',s.closed==='saved'?'Conversation stored. Open the reviewer view to see the record.':'Conversation closed. Nothing stored except a declined outcome.')}}
 </script></body></html>

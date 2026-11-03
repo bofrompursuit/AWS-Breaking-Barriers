@@ -11,14 +11,22 @@ A multilingual conversational agent: a producer describes a challenge, confirms 
 
 ```bash
 npm install
-# put ANTHROPIC_API_KEY in .env  (or LLM_PROVIDER=bedrock + AWS credentials + AWS_REGION)
-npm start            # http://localhost:3000  (producer chat)  ·  /review  (IRL reviewer view)
+# AWS credentials + AWS_REGION in .env (see .env.example). Claude runs on Amazon Bedrock only.
+npm start            # http://127.0.0.1:3000  (producer chat)  ·  /review  (IRL reviewer view)
 npm test             # scope / grounding / decline / PII tests, no LLM needed
 node scripts/scenario.js drought-es | decline-en | out-of-scope-pii-en   # scripted live scenarios (server must be running)
 npm run seed         # writes the synthetic dataset to data/synthetic/*.json
 ```
 
 Requires Node ≥ 22.5 (uses the built-in `node:sqlite`). Delete `data/exchange.db` to reset.
+
+## Access and spend guards
+
+- **Bedrock only.** All model calls go through Amazon Bedrock (`anthropic.claude-opus-5-5` by default), as FTUSA's technical document requires. `ANTHROPIC_API_KEY` is ignored.
+- **Passwords.** `DEMO_PASSWORD` gates the chat; `REVIEW_PASSWORD` gates `/review` and the record APIs (and also opens the chat). Browsers prompt via HTTP Basic auth. Both are optional locally; a hosted deployment returns 503 until they are set.
+- **Limits.** Chat turns are rate-limited per IP (`CHAT_RATE_LIMIT`, default 60 per 10 minutes), conversations are capped (`MAX_TURNS_PER_SESSION`, default 30), and in-memory sessions are bounded (`MAX_SESSIONS`).
+- **Known limitation.** Sessions and the database are in memory / per instance, so on Vercel a conversation can end with "no longer available" if a request lands on another instance. Durable sessions (AgentCore Runtime or DynamoDB) are the real fix.
+- Locally the server listens on `127.0.0.1` only (`HOST` to change).
 
 ## Demo script
 

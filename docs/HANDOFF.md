@@ -58,7 +58,7 @@ The join query is `JOIN_SQL` in `lib/store.js`. It returns the record alongside 
 |---|---|
 | `lib/server.js` (node:http) | API Gateway (HTTP API) + Lambda (Node 22). The `/api/chat` handler is unchanged. |
 | in-memory session map | DynamoDB `sessions` table with TTL (state + messages) |
-| Anthropic API client | Claude on Amazon Bedrock: `LLM_PROVIDER=bedrock`, `AnthropicBedrockMantle`, model `anthropic.claude-opus-5-5` |
+| Model client | Already Claude on Amazon Bedrock (`AnthropicBedrockMantle`, model `anthropic.claude-opus-5-5`); move to a Strands `BedrockModel` |
 | SQLite `exchange_records` (pk/sk + item) | DynamoDB table with the same pk/sk, then a stream → Redshift for the join |
 | SQLite synthetic Premium / survey / cert tables | Atlas / Redshift tables (join on `producer_id`) |
 | `data/standards/*.csv` | S3 + (optionally) a Bedrock Knowledge Base; the `search_standards` contract stays the same |

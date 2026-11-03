@@ -22,7 +22,7 @@ header{background:var(--indigo);color:#fff;border-bottom:4px solid var(--brand)}
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 async function load(sel){const {records}=await fetch('/api/records').then(r=>r.json());
- $('#list').innerHTML=records.map(r=>`<div class="row" data-id="${r.record_id}"><b>${r.producer_id}</b> · ${r.outcome}<br><span class="pill ${r.review_status}">${r.review_status}</span>${r.pii_flag?.raised?'<span class="pill pending">PII flag</span>':''}<span class="c"> ${new Date(r.created_at).toLocaleString()}</span></div>`).join('')||'No records yet.';
+ $('#list').innerHTML=records.map(r=>`<div class="row" data-id="${esc(r.record_id)}"><b>${esc(r.producer_id)}</b> · ${esc(r.outcome)}<br><span class="pill ${esc(r.review_status)}">${esc(r.review_status)}</span>${r.pii_flag?.raised?'<span class="pill pending">PII flag</span>':''}<span class="c"> ${new Date(r.created_at).toLocaleString()}</span></div>`).join('')||'No records yet.';
  document.querySelectorAll('.row').forEach(el=>el.onclick=()=>show(el.dataset.id));if(sel)show(sel)}
 async function show(id){document.querySelectorAll('.row').forEach(el=>el.classList.toggle('on',el.dataset.id===id));
  const j=await fetch(`/api/records/${id}/joined`).then(r=>r.json());const r=j.record;
@@ -30,8 +30,8 @@ async function show(id){document.querySelectorAll('.row').forEach(el=>el.classLi
  $('#detail').innerHTML=`<h2>Record</h2><div class="kv">${kv.map(([k,v])=>`<b>${k}</b><span>${esc(v)}</span>`).join('')}</div>
  ${r.outcome==='completed'?`<h2>Challenge summary (producer's words)</h2><textarea id="sum" rows="3">${esc(r.challenge_summary)}</textarea>${r.challenge_summary_en&&r.challenge_summary_en!==r.challenge_summary?`<div class="c">EN: ${esc(r.challenge_summary_en)}</div>`:''}
  <h2>Challenge tags</h2><input id="tags" value="${esc((r.tags||[]).join('; '))}"><div class="c">Separate with semicolons.</div><button id="approve">${r.review_status==='reviewed'?'Save corrections':'Approve / mark reviewed'}</button>
- <h2>Guidance given</h2>${r.guidance.insights.map(g=>`<div class="g">${esc(g.text)}<div class="c">Sources: ${g.citations.map(c=>esc(c.id+' — '+(c.dataset||c.title||c.kind))).join('; ')} · Clauses: ${g.clauses.map(c=>c.clause_id).join(', ')}</div></div>`).join('')}
- ${r.guidance.examples.map(e=>`<div class="g">${esc(e.text)}<div class="c">Peer: ${esc(e.citation.id+' — '+e.citation.peer_organization+', '+e.citation.title)} · Clauses: ${e.clauses.map(c=>c.clause_id).join(', ')}</div></div>`).join('')}
+ <h2>Guidance given</h2>${r.guidance.insights.map(g=>`<div class="g">${esc(g.text)}<div class="c">Sources: ${g.citations.map(c=>esc(c.id+' — '+(c.dataset||c.title||c.kind))).join('; ')} · Clauses: ${esc(g.clauses.map(c=>c.clause_id).join(', '))}</div></div>`).join('')}
+ ${r.guidance.examples.map(e=>`<div class="g">${esc(e.text)}<div class="c">Peer: ${esc(e.citation.id+' — '+e.citation.peer_organization+', '+e.citation.title)} · Clauses: ${esc(e.clauses.map(c=>c.clause_id).join(', '))}</div></div>`).join('')}
  <h2>Agent reasoning log</h2><pre>${esc(r.reasoning_log.map(l=>`${l.at}  ${l.tool}: ${l.reasoning}`).join('\n'))}</pre>`:'<p class="c">Declined: no conversation content was stored.</p>'}
  <h2>Joined with producer data (metadata store query)</h2><pre>${esc(j.sql)}</pre>
  <div class="kv"><b>Premium projects</b><span>${j.premium_projects.map(p=>esc(`${p.project_id} · ${p.year} · ${p.title} · $${p.amount_usd.toLocaleString()} · ${p.status}`)).join('<br>')}</span>
