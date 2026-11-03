@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+data/exchange.db*
+node_modules
+.git
