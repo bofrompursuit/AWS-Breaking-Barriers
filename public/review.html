@@ -22,7 +22,7 @@ header{background:var(--indigo);color:#fff;border-bottom:4px solid var(--brand)}
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 async function load(sel){const {records}=await fetch('/api/records').then(r=>r.json());
- $('#list').innerHTML=records.map(r=>`<div class="row" data-id="${esc(r.record_id)}"><b>${esc(r.producer_id)}</b> · ${esc(r.outcome)}<br><span class="pill ${esc(r.review_status)}">${esc(r.review_status)}</span>${r.pii_flag?.raised?'<span class="pill pending">PII flag</span>':''}<span class="c"> ${new Date(r.created_at).toLocaleString()}</span></div>`).join('')||'No records yet.';
+ $('#list').innerHTML=records.map(r=>`<div class="row" data-id="${esc(r.record_id)}"><b>${esc(r.producer_id)}</b> · ${esc(r.outcome)}<br><span class="pill ${esc(r.review_status)}">${esc(r.review_status)}</span>${r.pii_flag?.raised?'<span class="pill pending">PII flag</span>':''}${r.sample?'<span class="pill">Sample</span>':''}<span class="c"> ${new Date(r.created_at).toLocaleString()}</span></div>`).join('')||'No records yet.';
  document.querySelectorAll('.row').forEach(el=>el.onclick=()=>show(el.dataset.id));if(sel)show(sel)}
 async function show(id){document.querySelectorAll('.row').forEach(el=>el.classList.toggle('on',el.dataset.id===id));
  const j=await fetch(`/api/records/${id}/joined`).then(r=>r.json());const r=j.record;

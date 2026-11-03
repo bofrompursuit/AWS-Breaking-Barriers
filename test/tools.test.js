@@ -95,3 +95,14 @@ test('PII detector flags contact details without altering text', () => {
   assert.ok(detectPii('write to ana@example.org').includes('contact_details'));
   assert.deepEqual(detectPii('rain was down 20% in 2025'), []);
 });
+
+test('sample records are built through the real tool flow and labeled', async () => {
+  const { seedSampleRecords } = await import('../lib/samples.js');
+  const s = openStore(':memory:');
+  assert.equal(seedSampleRecords(s, standards), 3);
+  const recs = s.records();
+  assert.ok(recs.every((r) => r.sample && r.source === 'agent conversation'));
+  assert.equal(recs.filter((r) => r.outcome === 'declined').length, 1);
+  assert.ok(recs.some((r) => r.pii_flag.raised) && recs.some((r) => r.review_status === 'reviewed'));
+  assert.equal(seedSampleRecords(s, standards), 0, 'does not reseed a non-empty store');
+});
